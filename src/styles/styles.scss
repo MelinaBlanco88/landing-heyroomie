@@ -21,7 +21,6 @@ body {
 	}
 
 	.title-section {
-		margin-bottom: 25px;
 		text-transform: uppercase;
 		line-height: 1em;
 		letter-spacing: .025em;
@@ -31,8 +30,12 @@ body {
 			size: 3rem;
 		}	
 
-		@media (min-width: 1024px) {
+		@media (min-width: 749px) {
 			font-size: 5rem;
+		}
+
+		@media (min-width: 1024px) {
+			font-size: 6rem;
 		}
 	}
 
@@ -109,9 +112,9 @@ body {
 			height: 100%;
 			width: 200%; /* Ajusta el tamaño para cubrir el doble del ancho del contenedor */
 			overflow: hidden;
-		  }
+		}
 		  
-		  .background {
+		.background {
 			position: absolute;
 			top: 16px;
 			left: 0;
@@ -119,20 +122,33 @@ body {
 			width: 100%;
 			background-image: url('../../public/images/separator.png');
 			background-repeat: repeat-x;
-			animation: moveSeparator 30s linear infinite;
-		  }
+			animation: moveSeparator 10s linear infinite;
+		}
 		  
-		  @keyframes moveSeparator {
+		@keyframes moveSeparator {
 			0% {
 			  transform: translateX(0);
 			}
 			100% {
 			  transform: translateX(-50%); /* Mueve el fondo a la mitad del ancho del contenedor */
 			}
-		  }
+		}
+
+		@media (min-width: 749px) {
+			.background { animation: moveSeparator 30s linear infinite; }
+		}
 	}
 
 	#form {
+		.subtitle-section {
+			text-transform: uppercase;
+			margin: 5px 0 40px 0;
+			font: {
+				weight: 300;
+				size: 1.25rem;
+			}
+		}
+
 		.btn-primary {
 			background-color: var(--primaryColor);
 			color: var(--secondaryColor);
@@ -144,16 +160,42 @@ body {
 			}
 			&:hover, 
 			&:focus, 
-			&:active {
-				color: var(--primaryColor);
-			}
+			&:active { color: var(--primaryColor); }
+		}
+
+		.form-control, .form-select {
+			--bs-border-radius: 2rem;
+			--bs-border-width: 3px;
+			--bs-border-color: var(--primaryColor);
+			padding: 0.75rem;
 		}
 
 		.form-group {
-			@media (min-width: 749px) {
+			.mb-3 {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+
+				.form-text {
+					padding-left: 10px;
+				}
+			}
+		}
+
+		@media (min-width: 749px) {
+			.second-line {
+				font-size: 4rem;
+			}
+
+			.form-group {
 				display: grid;
 				grid-template-columns: repeat(2, 1fr);
 				grid-gap: 10px;
+			}
+		}
+		@media (min-width: 1024px) {
+			.second-line {
+				font-size: 5rem;
 			}
 		}
 	}
@@ -172,7 +214,10 @@ body {
 		}
 
 		.social-nav {
+			flex-wrap: wrap;
 			a {
+				width: 70px;
+				height: 70px;
 				border-radius: 50%;
 				background-color: transparent;
 				border: 3px solid var(--primaryColor);

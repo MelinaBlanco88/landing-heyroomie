@@ -4,7 +4,7 @@ export const Contact = () => {
 	return (
 		<>
 			<Form>
-				<div className="form-group">
+				<div className="form-group mb-4">
 					<Form.Group className="mb-3" controlId="formBasicEmail">
 						<Form.Control type="text" placeholder="Enter name" />
 					</Form.Group>

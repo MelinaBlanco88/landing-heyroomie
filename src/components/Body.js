@@ -9,13 +9,13 @@ export const Body = () => {
             <section id="hero" className="primary-bg">
                 <Container>
                     <Row className="align-items-center">
-                        <Col className="text-center text-md-start" xs={12} md={6}>
+                        <Col className="text-center text-md-start" xs={12} md={7}>
                             <h1 className="title-section">open the door</h1> 
                             <h1 className="title-section">to the future</h1>
                             <Link to="form"><Button variant="secondary" className="hvr-grow">Joint Waitlist</Button></Link>
                         </Col>
 
-                        <Col className="d-flex justify-content-center justify-content-md-end" xs={12} md={6}>
+                        <Col className="d-flex justify-content-center justify-content-md-end" xs={12} md={5}>
                             <Image
                                 fluid
                                 src='./images/banner.png'
@@ -63,7 +63,9 @@ export const Body = () => {
                     <Row className="justify-content-center">
                         <Col className="text-center">
                             <h1 className="title-section">The best stories start</h1> 
-                            <h1 className="title-section">with an exciting wait</h1>
+                            <h1 className="title-section second-line">with an exciting wait</h1>
+
+                            <h5 className="subtitle-section">Sign up for our waitlist and be part of our history</h5>
 
                             <Contact />
                         </Col>
