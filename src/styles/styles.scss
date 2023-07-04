@@ -182,11 +182,23 @@ body {
 			&:active { color: var(--primaryColor); }
 		}
 
+		.cod-phone  {
+			input {
+				width: inherit;
+				padding: 1rem;
+				box-shadow: none;
+				border-radius: 2rem;
+				border: 3px solid var(--primaryColor);
+			}
+			.form-control { text-align: right; }
+			.flag-dropdown  { left: 5px; }
+		}
+
 		.form-control, .form-select {
 			--bs-border-radius: 2rem;
 			--bs-border-width: 3px;
 			--bs-border-color: var(--primaryColor);
-			padding: 0.75rem;
+			padding: 1rem;
 		}
 
 		.form-group {
@@ -195,27 +207,22 @@ body {
 				flex-direction: column;
 				align-items: flex-start;
 
-				.form-text {
-					padding-left: 10px;
-				}
+				.form-text { padding-left: 10px; }
 			}
 		}
 
 		@media (min-width: 749px) {
-			.second-line {
-				font-size: 4rem;
-			}
+			.second-line { font-size: 4rem; }
 
+			
+		}
+		@media (min-width: 1024px) {
 			.form-group {
 				display: grid;
 				grid-template-columns: repeat(2, 1fr);
 				grid-gap: 10px;
 			}
-		}
-		@media (min-width: 1024px) {
-			.second-line {
-				font-size: 5rem;
-			}
+			.second-line { font-size: 5rem; }
 		}
 	}
 
