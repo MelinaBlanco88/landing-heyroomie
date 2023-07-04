@@ -1,0 +1,97 @@
+@use "./variables";
+
+html,
+body {
+	.primary-bg {
+		background-color: var(--primaryColor);
+		color: var(--secondaryColor);
+	}
+	.secondary-bg {
+		background-color: var(--secondaryColor);
+		color: var(--primaryColor);
+	}
+	.accent-bg {
+		background-color: var(--accentColor);
+		color: var(--secondaryColor);
+	}
+	.black-bg {
+		background-color: black;
+		color: var(--primaryColor);
+	}
+
+	.title-section {
+		margin-bottom: 25px;
+		text-transform: uppercase;
+		line-height: 1em;
+		letter-spacing: .025em;
+		font: {
+			family: var(--bs-font-secondary);
+			weight: 600;
+			size: 3rem;
+		}	
+
+		@media (min-width: 1024px) {
+			font-size: 5rem;
+		}
+	}
+
+	.item-text {
+		line-height: 1.25em;
+		font-weight: 300;
+
+		b { font-weight: 700; }
+
+		@media (min-width: 1024px) {
+			font-size: 2rem;
+		}
+	}
+
+	.btn {
+		border-radius: 30px;
+		font: {
+			weight: 800;
+			size: 1.125rem;
+		}	
+		padding: {
+			left: 25px;
+			right: 25px;
+		}
+
+		&.btn-primary {
+			border: 1px solid black;
+			background-color: white;
+			color: black;
+		}
+
+		&.btn-secondary {
+			border: 1px solid var(--secondaryColor);
+			background-color: var(--accentColor);
+			color: var(--secondaryColor);
+		}
+
+		@media (min-width: 1024px) {
+			font-size: 1.625rem;
+		}
+	}
+
+	section {
+		padding: 85px 0;
+	}
+
+	#form {
+		.btn-primary {
+			background-color: var(--primaryColor);
+			color: var(--secondaryColor);
+			border-color: var(--secondaryColor);
+		}
+
+		.form-group {
+			@media (min-width: 749px) {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				grid-gap: 10px;
+			}
+		}
+	}
+}
+
