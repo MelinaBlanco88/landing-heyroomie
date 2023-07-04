@@ -96,11 +96,12 @@ body {
 
 	#footer {
 		.logo-image {
-			max-width: 220px;
+			max-width: 125px;
 			margin: 0 auto;
 		}
 
 		.title-section {
+			margin: 35px 0;
 			@media (min-width: 1024px) {
 				font-size: 3.5rem;
 			}
