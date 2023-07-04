@@ -1,4 +1,5 @@
 import { Container, Navbar, Image, Button } from "react-bootstrap";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 export const Header = () => {
 	return (
@@ -19,7 +20,7 @@ export const Header = () => {
 
 					<Navbar.Collapse className="justify-content-end">
 					<Navbar.Text>
-						<Button className="hvr-grow">Joint Waitlist</Button>
+						<Link to="form"><Button className="hvr-grow" >Joint Waitlist</Button></Link>
 					</Navbar.Text>
 					</Navbar.Collapse>
 				</Container>

@@ -1,6 +1,7 @@
 
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
-import { Contact } from "../components/Contact"
+import { Contact } from "../components/Contact";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 export const Body = () => {
 	return (
@@ -11,7 +12,7 @@ export const Body = () => {
                         <Col className="text-center text-md-start" xs={12} md={6}>
                             <h1 className="title-section">open the door</h1> 
                             <h1 className="title-section">to the future</h1>
-                            <Button variant="secondary" className="hvr-grow">Joint Waitlist</Button>
+                            <Link to="form"><Button variant="secondary" className="hvr-grow">Joint Waitlist</Button></Link>
                         </Col>
 
                         <Col className="d-flex justify-content-center justify-content-md-end" xs={12} md={6}>

@@ -14,16 +14,16 @@ export const Footer = () => {
 					/>
 					<h1 className="title-section">Follow Us</h1>
 					<Stack direction='horizontal' gap={2} className='social-nav d-flex justify-content-center'>
-						<a href="https://twitter.com/HeyRoomieApp" className='p-3 mx-2 hvr-radial-out'>
+						<a href="https://twitter.com/HeyRoomieApp" className='p-3 mx-2 hvr-radial-out' target="_blank" rel="noreferrer">
 							<BsTwitter size={32} />
 						</a>
-						<a href="https://www.facebook.com/heyroomieapp" className='p-3 mx-2 hvr-radial-out'>
+						<a href="https://www.facebook.com/heyroomieapp" className='p-3 mx-2 hvr-radial-out' target="_blank" rel="noreferrer">
 							<BiLogoFacebook size={32} />
 						</a>
-						<a href="https://www.instagram.com/heyroomieapp/" className='p-3 mx-2 hvr-radial-out'>
+						<a href="https://www.instagram.com/heyroomieapp/" className='p-3 mx-2 hvr-radial-out' target="_blank" rel="noreferrer">
 							<BsInstagram size={32} />
 						</a>
-						<a href="https://www.linkedin.com/company/hey-roomie" className='p-3 mx-2 hvr-radial-out'>
+						<a href="https://www.linkedin.com/company/hey-roomie" className='p-3 mx-2 hvr-radial-out' target="_blank" rel="noreferrer">
 							<BiLogoLinkedin size={32} />
 						</a>
 					</Stack>
