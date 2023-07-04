@@ -216,13 +216,18 @@ body {
 		.social-nav {
 			flex-wrap: wrap;
 			a {
-				width: 70px;
-				height: 70px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 55px;
+				height: 55px;
 				border-radius: 50%;
 				background-color: transparent;
 				border: 3px solid var(--primaryColor);
 				
 				svg { 
+					width: 24px;
+					height: 24px;
 					fill: var(--primaryColor); 
 					transition-duration: 0.5s;
 				}
@@ -235,6 +240,18 @@ body {
 				&:focus, 
 				&:active {
 					svg { fill: var(--secondaryColor); }
+				}
+			}
+		}
+
+		@media (min-width: 749px) {
+			.social-nav a {
+				width: 70px;
+				height: 70px;
+
+				svg { 
+					width: 32px;
+					height: 32px;
 				}
 			}
 		}
