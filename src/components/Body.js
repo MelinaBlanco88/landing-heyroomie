@@ -11,7 +11,7 @@ export const Body = () => {
                         <Col className="text-center text-md-start" xs={12} md={6}>
                             <h1 className="title-section">open the door</h1> 
                             <h1 className="title-section">to the future</h1>
-                            <Button variant="secondary">Joint Waitlist</Button>
+                            <Button variant="secondary" className="hvr-grow">Joint Waitlist</Button>
                         </Col>
 
                         <Col className="d-flex justify-content-center justify-content-md-end" xs={12} md={6}>
@@ -24,6 +24,16 @@ export const Body = () => {
                     </Row>
                 </Container>
             </section>
+
+            <div className="overflow">
+                <section id="separator" className="accent-bg">
+                    <div className="background-container">
+                        <div className="background">
+                            <span className="hidden">Hey! Roomie - One app for all roomie</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
 
             <section id="about" className="secondary-bg">
                 <Container>

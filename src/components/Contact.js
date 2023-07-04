@@ -34,7 +34,7 @@ export const Contact = () => {
 					
 				</div>
 
-				<Button variant="primary" type="submit">I want to register</Button>
+				<Button variant="primary" type="submit" className="hvr-radial-out">I want to register</Button>
 			</Form>
         </>
 	);

@@ -1,4 +1,5 @@
 @use "./variables";
+@import url(./hover.css);
 
 html,
 body {
@@ -35,6 +36,18 @@ body {
 		}
 	}
 
+	.hidden {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		padding: 0;
+		border: 0;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+	}
+	.overflow { overflow-x: clip; }
+
 	.item-text {
 		line-height: 1.25em;
 		font-weight: 300;
@@ -47,6 +60,7 @@ body {
 	}
 
 	.btn {
+		transition: .3s ease;
 		border-radius: 30px;
 		font: {
 			weight: 800;
@@ -74,8 +88,48 @@ body {
 		}
 	}
 
-	section {
-		padding: 85px 0;
+	section { padding: 85px 0; }
+
+	#separator {
+		position: relative;
+  		height: 100px;
+		margin-top: -35px;
+    	margin-bottom: -35px;
+		transform: rotate(-2deg);
+		border: {
+			top: 1px solid var(--secondaryColor);
+			bottom: 1px solid var(--secondaryColor);
+		}
+		padding: 50px 0;
+	
+		.background-container {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 200%; /* Ajusta el tamaño para cubrir el doble del ancho del contenedor */
+			overflow: hidden;
+		  }
+		  
+		  .background {
+			position: absolute;
+			top: 16px;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background-image: url('../../public/images/separator.png');
+			background-repeat: repeat-x;
+			animation: moveSeparator 30s linear infinite;
+		  }
+		  
+		  @keyframes moveSeparator {
+			0% {
+			  transform: translateX(0);
+			}
+			100% {
+			  transform: translateX(-50%); /* Mueve el fondo a la mitad del ancho del contenedor */
+			}
+		  }
 	}
 
 	#form {
@@ -83,6 +137,16 @@ body {
 			background-color: var(--primaryColor);
 			color: var(--secondaryColor);
 			border-color: var(--secondaryColor);
+
+			&:before {
+				transition-duration: 0.5s;
+				background-color: var(--secondaryColor);
+			}
+			&:hover, 
+			&:focus, 
+			&:active {
+				color: var(--primaryColor);
+			}
 		}
 
 		.form-group {
@@ -104,6 +168,29 @@ body {
 			margin: 35px 0;
 			@media (min-width: 1024px) {
 				font-size: 3.5rem;
+			}
+		}
+
+		.social-nav {
+			a {
+				border-radius: 50%;
+				background-color: transparent;
+				border: 3px solid var(--primaryColor);
+				
+				svg { 
+					fill: var(--primaryColor); 
+					transition-duration: 0.5s;
+				}
+
+				&:before {
+					transition-duration: 0.5s;
+					background-color: var(--primaryColor);
+				}
+				&:hover, 
+				&:focus, 
+				&:active {
+					svg { fill: var(--secondaryColor); }
+				}
 			}
 		}
 	}
