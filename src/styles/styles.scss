@@ -93,5 +93,18 @@ body {
 			}
 		}
 	}
+
+	#footer {
+		.logo-image {
+			max-width: 220px;
+			margin: 0 auto;
+		}
+
+		.title-section {
+			@media (min-width: 1024px) {
+				font-size: 3.5rem;
+			}
+		}
+	}
 }
 
