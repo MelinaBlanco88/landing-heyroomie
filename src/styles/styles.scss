@@ -27,7 +27,7 @@ body {
 		font: {
 			family: var(--bs-font-secondary);
 			weight: 600;
-			size: 3rem;
+			size: 3.5rem;
 		}	
 
 		@media (min-width: 749px) {
@@ -93,9 +93,22 @@ body {
 
 	section { padding: 85px 0; }
 
+	#header {
+		@media (max-width: 749px) {
+			.logo-image { max-width: 100px; }
+		}
+	}
+
+	#hero {
+		@media (max-width: 749px) {
+			padding-top: 50px;
+
+			.btn { margin: 20px 0; }
+		}
+	}
+
 	#separator {
 		position: relative;
-  		height: 100px;
 		margin-top: -35px;
     	margin-bottom: -35px;
 		transform: rotate(-2deg);
@@ -103,7 +116,7 @@ body {
 			top: 1px solid var(--secondaryColor);
 			bottom: 1px solid var(--secondaryColor);
 		}
-		padding: 50px 0;
+		padding: 35px 0;
 	
 		.background-container {
 			position: absolute;
@@ -123,6 +136,7 @@ body {
 			background-image: url('../../public/images/separator.png');
 			background-repeat: repeat-x;
 			animation: moveSeparator 10s linear infinite;
+			background-size: contain;
 		}
 		  
 		@keyframes moveSeparator {
@@ -135,7 +149,12 @@ body {
 		}
 
 		@media (min-width: 749px) {
-			.background { animation: moveSeparator 30s linear infinite; }
+			padding: 50px 0;
+
+			.background { 
+				animation: moveSeparator 30s linear infinite; 
+				background-size: auto;
+			}
 		}
 	}
 

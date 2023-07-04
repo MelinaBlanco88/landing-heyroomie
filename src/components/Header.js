@@ -16,12 +16,12 @@ export const Header = () => {
 							style={{ objectFit: "contain" }}
 						/>
 					</Navbar.Brand>
-					<Navbar.Toggle />
+
 
 					<Navbar.Collapse className="justify-content-end">
-					<Navbar.Text>
-						<Link to="form"><Button className="hvr-grow" >Joint Waitlist</Button></Link>
-					</Navbar.Text>
+						<Navbar.Text>
+							<Link to="form"><Button className="hvr-grow" >Joint Waitlist</Button></Link>
+						</Navbar.Text>
 					</Navbar.Collapse>
 				</Container>
 			</Navbar>
