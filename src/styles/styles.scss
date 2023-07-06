@@ -96,9 +96,10 @@ body {
 		img {
 			position: absolute;
 			right: -70px;
-			bottom: -17px;
-			width: 30px;
-			height: 60px;
+			bottom: -16px;
+			object-fit: cover;
+    		border: none;
+			height: 65px;
 		}
 	}
 
