@@ -152,14 +152,19 @@ export const Contact = () => {
 
       <Modal show={showSuccessMessage || errorMessage} onHide={handleCloseModal}>
         <Modal.Header closeButton>
-          <Modal.Title>Registration Status</Modal.Title>
+          <Modal.Title>¡Contratulations!</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {showSuccessMessage && <p>Your data has been sent successfully</p>}
+          {showSuccessMessage && 
+            <>
+              <p>Your data has been sent successfully.</p>
+              <p>You are receiving a Beta version when available.</p>
+            </>
+          }
           {errorMessage && <p>{errorMessage}</p>}
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseModal}>
+          <Button variant="success" onClick={handleCloseModal}>
             Close
           </Button>
         </Modal.Footer>
