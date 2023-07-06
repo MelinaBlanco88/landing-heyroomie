@@ -49,9 +49,10 @@ export const Body = () => {
 
                         <Col className="d-flex justify-content-center justify-content-md-end" xs={12} md={7}>
                             <span className="item-text">
-                                <b>Hey! Roomie</b> is a cutting-edge platform that aims to transform the way people find roommates
-                                and shared living spaces. With the rising costs of housing and the increasing trend of individuals
-                                seeking shared accommodations, <b>Hey! Roomie</b> is here to simplify and enhance the roommate search process.
+                                <b>Hey! Roomie</b> is a cutting-edge platform that aims to transform the way people find roommates 
+                                and share living spaces. With the rising costs of housing and the increasing trend of individuals 
+                                looking for shared accommodations, <b>Hey! Roomie</b> is here to simplify and enhance the roommate 
+                                search process.
                             </span>
                         </Col>
                     </Row>
@@ -65,7 +66,7 @@ export const Body = () => {
                             <h1 className="title-section">The best stories start</h1>
                             <h1 className="title-section second-line">with an exciting wait</h1>
 
-                            <h5 className="subtitle-section">Sign up for our waitlist and be part of our history</h5>
+                            <h5 className="subtitle-section">Join our waitlist and be part of our history</h5>
 
                             <Contact />
                         </Col>

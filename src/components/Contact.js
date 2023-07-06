@@ -16,6 +16,7 @@ export const Contact = () => {
   const { name, email, phoneCod, phoneNumber, country, onInputChange } =
     useForm(formData);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e) => {
@@ -31,6 +32,12 @@ export const Contact = () => {
       if (data.ok) {
         setShowSuccessMessage(true);
         setErrorMessage("");
+        onInputChange({ target: { name: "name", value: "" } });
+        onInputChange({ target: { name: "email", value: "" } });
+        onInputChange({ target: { name: "phoneCod", value: "" } });
+        onInputChange({ target: { name: "phoneNumber", value: "" } });
+        onInputChange({ target: { name: "country", value: "" } });
+        setFormSubmitted(true);
       } else {
         setShowSuccessMessage(false);
         setErrorMessage("Failed to send the form. Please try again.");
@@ -56,35 +63,37 @@ export const Contact = () => {
             onChange={onInputChange}
             type="text"
             placeholder="Enter name"
+            value={formSubmitted ? "" : name}
           />
         </Form.Group>
 
         <Form.Group className="mb-3">
           <Row className="cod-phone align-items-center w-100 m-0">
             <Col xs={4} md={2} lg={3} xl={2} className="p-0">
-              <PhoneInput
-                inputProps={{
-                  name: "phoneCod",
-                  required: true,
-                }}
-                onChange={(e) =>
-                  onInputChange({ target: { name: "phoneCod", value: e } })
-                }
-                country="mx"
-                preferredCountries={[
-                  "ar",
-                  "mx",
-                  "es",
-                  "cr",
-                  "pa",
-                  "cl",
-                  "co",
-                  "ec",
-                  "sv",
-                  "hn",
-                  "pe",
-                ]}
-              />
+            <PhoneInput
+              inputProps={{
+                name: "phoneCod",
+                required: true,
+              }}
+              onChange={(e) =>
+                onInputChange({ target: { name: "phoneCod", value: e } })
+              }
+              country="mx"
+              preferredCountries={[
+                "ar",
+                "mx",
+                "es",
+                "cr",
+                "pa",
+                "cl",
+                "co",
+                "ec",
+                "sv",
+                "hn",
+                "pe",
+              ]}
+              value={formSubmitted ? "" : phoneCod}
+            />
             </Col>
             <Col xs={1} className="p-0">
               -
@@ -98,7 +107,7 @@ export const Contact = () => {
                 autoComplete="on"
                 id="phoneInput"
                 placeholder="Phone"
-                value={phoneNumber}
+                value={formSubmitted ? "" : phoneNumber}
                 onChange={onInputChange}
               />
             </Col>
@@ -109,11 +118,11 @@ export const Contact = () => {
             type="email"
             placeholder="Enter email"
             name="email"
-            value={email}
+            value={formSubmitted ? "" : email}
             onChange={onInputChange}
           />
           <Form.Text className="text-muted">
-		  	We&quot;ll never share your email with anyone else.
+		        We&quot;ll never share your email with anyone else.
           </Form.Text>
         </Form.Group>
 
@@ -124,6 +133,7 @@ export const Contact = () => {
               onInputChange({ target: { name: "country", value: e.target.value } })
             }
             aria-label="Default select"
+            value={formSubmitted ? "" : country}
           >
             <option>Country</option>
             <option value="USA">USA</option>
@@ -145,7 +155,7 @@ export const Contact = () => {
           <Modal.Title>Registration Status</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {showSuccessMessage && <p>Registro enviado con éxito.</p>}
+          {showSuccessMessage && <p>Your data has been sent successfully</p>}
           {errorMessage && <p>{errorMessage}</p>}
         </Modal.Body>
         <Modal.Footer>
