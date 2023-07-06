@@ -155,7 +155,7 @@ export const Contact = () => {
           <Modal.Title>
             ¡Contratulations!
             
-            <Image src="../../public/images/hand.png" thumbnail alt="Hand ok" />
+            <Image src="../../images/hand.png" thumbnail alt="Hand ok" />
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
