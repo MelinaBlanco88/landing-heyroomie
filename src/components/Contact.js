@@ -1,6 +1,6 @@
 import { Button, Col, Form, Row } from "react-bootstrap";
-import 'react-phone-input-2/lib/bootstrap.css'
-import PhoneInput from 'react-phone-input-2'
+import "react-phone-input-2/lib/bootstrap.css"
+import PhoneInput from "react-phone-input-2"
 import { useForm } from "../hooks/useForm";
 import axios from "axios";
 
@@ -29,7 +29,7 @@ export const Contact = () => {
 			// aca habria q hacer que como todo salio bien muestre un cartelito o similar
 			// Se podria agregar un modal y un state de showModal que sea true o false, el modal habría que ponerlo en este componente para no complicar los estados, cualquier cosa me avisas
 		} catch (error) {
-			// acá seria por el caso contrario, se puede usar el mismo modal o cartel y cambiar el texto
+			// aqui seria por el caso contrario, se puede usar el mismo modal o cartel y cambiar el texto
 			console.log(error)
 		}
 	};
@@ -46,10 +46,10 @@ export const Contact = () => {
 						<Col xs={4} md={2} lg={3} xl={2} className="p-0">
 							<PhoneInput
 								inputProps={{
-									name: 'phoneCod',
+									name: "phoneCod",
 									required: true,
 								}}
-								onChange={(e) => onInputChange({ target: { name: 'phoneCod', value: e } })}
+								onChange={(e) => onInputChange({ target: { name: "phoneCod", value: e } })}
 								country="mx"
 								preferredCountries={["ar", "mx", "es", "cr", "pa", "cl", "co", "ec", "sv", "hn", "pe"]}
 							/>
@@ -58,12 +58,12 @@ export const Contact = () => {
 						<Col xs={7} md={9} lg={8} xl={9} className="p-0">
 							<input
 								required
-								className='w-100'
-								type='tel'
-								name='phoneNumber'
+								className="w-100"
+								type="tel"
+								name="phoneNumber"
 								autoComplete="on"
-								id='phoneInput'
-								placeholder='Phone'
+								id="phoneInput"
+								placeholder="Phone"
 								value={phoneNumber}
 								onChange={onInputChange}
 							/>
@@ -78,12 +78,12 @@ export const Contact = () => {
 						onChange={onInputChange}
 					/>
 					<Form.Text className="text-muted">
-						We'll never share your email with anyone else.
+						We"ll never share your email with anyone else.
 					</Form.Text>
 				</Form.Group>
 
 				<Form.Group controlId="formBasicEmail">
-					<Form.Select className="mb-3" onChange={(e) => onInputChange({ target: { name: 'country', value: e.target.value } })} aria-label="Default select">
+					<Form.Select className="mb-3" onChange={(e) => onInputChange({ target: { name: "country", value: e.target.value } })} aria-label="Default select">
 						<option>Country</option>
 						<option value="USA">USA</option>
 						<option value="México">México</option>
