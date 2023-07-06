@@ -20,7 +20,7 @@ export const Header = () => {
 
 					<Navbar.Collapse className="justify-content-end">
 						<Navbar.Text>
-							<Link to="form"><Button className="hvr-grow" >Joint Waitlist</Button></Link>
+							<Link to="form"><Button className="hvr-grow" >Join the waitlist</Button></Link>
 						</Navbar.Text>
 					</Navbar.Collapse>
 				</Container>
