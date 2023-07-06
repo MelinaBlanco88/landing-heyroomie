@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Col, Form, Row, Modal } from "react-bootstrap";
+import { Button, Col, Form, Row, Modal, Image } from "react-bootstrap";
 import "react-phone-input-2/lib/bootstrap.css";
 import PhoneInput from "react-phone-input-2";
 import { useForm } from "../hooks/useForm";
@@ -152,7 +152,11 @@ export const Contact = () => {
 
       <Modal show={showSuccessMessage || errorMessage} onHide={handleCloseModal}>
         <Modal.Header closeButton>
-          <Modal.Title>¡Contratulations!</Modal.Title>
+          <Modal.Title>
+            ¡Contratulations!
+            
+            <Image src="../../public/images/hand.png" thumbnail alt="Hand ok" />
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {showSuccessMessage && 

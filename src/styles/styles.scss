@@ -91,6 +91,17 @@ body {
 		}
 	}
 
+	.modal-dialog {
+		.modal-title { position: relative; }
+		img {
+			position: absolute;
+			right: -70px;
+			bottom: -17px;
+			width: 30px;
+			height: 60px;
+		}
+	}
+
 	section { padding: 85px 0; }
 
 	#header {
