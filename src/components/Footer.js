@@ -5,6 +5,7 @@ import { BiLogoLinkedin, BiLogoFacebook } from "react-icons/bi";
 export const Footer = () => {
 	return (
 		<footer id='footer' className="black-bg text-center">
+			<>
 			<Container>
 				<Row className="pt-5 pb-5">
 					<Image
@@ -29,6 +30,9 @@ export const Footer = () => {
 					</Stack>
 				</Row>
 			</Container>
+
+			<Image src="https://tracker.metricool.com/c3po.jpg?hash=6d2e7224aa13cde8c097412308fd6eea" alt="tracker" />
+			</>
 		</footer>
 	);
 };
