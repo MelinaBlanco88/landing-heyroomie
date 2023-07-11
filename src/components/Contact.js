@@ -13,7 +13,7 @@ const formData = {
 };
 
 export const Contact = () => {
-  const { name, email, phoneCod, phoneNumber, country, onInputChange } =
+  const { name, email, phoneCod, phoneNumber, country, onInputChange, onResetForm } =
     useForm(formData);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -21,7 +21,6 @@ export const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(country);
     try {
       const { data } = await axios({
         method: "POST",
@@ -32,11 +31,7 @@ export const Contact = () => {
       if (data.ok) {
         setShowSuccessMessage(true);
         setErrorMessage("");
-        onInputChange({ target: { name: "name", value: "" } });
-        onInputChange({ target: { name: "email", value: "" } });
-        onInputChange({ target: { name: "phoneCod", value: "" } });
-        onInputChange({ target: { name: "phoneNumber", value: "" } });
-        onInputChange({ target: { name: "country", value: "" } });
+        onResetForm()
         setFormSubmitted(true);
       } else {
         setShowSuccessMessage(false);
@@ -153,7 +148,7 @@ export const Contact = () => {
       <Modal show={showSuccessMessage || errorMessage} onHide={handleCloseModal}>
         <Modal.Header closeButton>
           <Modal.Title>
-            ¡Contratulations!
+            Congratulations!
             
             <Image src="../../images/hand.png" thumbnail alt="Hand ok" />
           </Modal.Title>
