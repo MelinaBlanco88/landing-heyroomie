@@ -172,6 +172,12 @@ body {
 
 	#about {
 		padding-bottom: 0;
+
+		@media (max-width: 749px) {
+			.text-md-start {
+				order: 2;
+			}
+		}
 	}
 
 	#form {
