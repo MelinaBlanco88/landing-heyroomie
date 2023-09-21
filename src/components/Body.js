@@ -38,7 +38,7 @@ export const Body = () => {
             <section id="about" className="secondary-bg">
                 <Container>
                     <Row className="align-items-center">
-                        <Col className="text-center text-md-start" xs={12} md={5}>
+                        <Col className="text-center text-md-start" xs={3}>
                             <Image
                                 fluid
                                 src='./images/prototipo.png'
@@ -46,7 +46,7 @@ export const Body = () => {
                             />
                         </Col>
 
-                        <Col className="d-flex justify-content-center justify-content-md-end" xs={12} md={7}>
+                        <Col className="d-flex justify-content-center justify-content-md-end" xs={9}>
                             <span className="item-text">
                                 En <b>Hey! Roomie</b> conectamos a personas con intereses y estilos de vida similares utilizando 
                                 algoritmos avanzados para garantizar una compatibilidad excepcional. 
