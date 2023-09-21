@@ -10,9 +10,9 @@ export const Body = () => {
                 <Container>
                     <Row className="align-items-center">
                         <Col className="text-center text-md-start" xs={12} md={7}>
-                            <h1 className="title-section">open the door</h1>
-                            <h1 className="title-section">to the future</h1>
-                            <Link to="form"><Button variant="secondary" className="hvr-grow">Join Waitlist</Button></Link>
+                            <h1 className="title-section">Compartir tu espacio,</h1>
+                            <h1 className="title-section">compartir tu vida.</h1>
+                            <Link to="form"><Button variant="secondary" className="hvr-grow">Únete a la lista</Button></Link>
                         </Col>
 
                         <Col className="d-flex justify-content-center justify-content-md-end" xs={12} md={5}>
@@ -42,17 +42,17 @@ export const Body = () => {
                         <Col className="text-center text-md-start" xs={12} md={5}>
                             <Image
                                 fluid
-                                src='./images/about.png'
+                                src='./images/prototipo.png'
                                 alt='About Hey! Roomie'
                             />
                         </Col>
 
                         <Col className="d-flex justify-content-center justify-content-md-end" xs={12} md={7}>
                             <span className="item-text">
-                                <b>Hey! Roomie</b> is a cutting-edge platform that aims to transform the way people find roommates 
-                                and share living spaces. With the rising costs of housing and the increasing trend of individuals 
-                                looking for shared accommodations, <b>Hey! Roomie</b> is here to simplify and enhance the roommate 
-                                search process.
+                                En <b>Hey! Roomie</b> conectamos a personas con intereses y estilos de vida similares utilizando 
+                                algoritmos avanzados para garantizar una compatibilidad excepcional. 
+                                <br />
+                                Ofrecemos una plataforma segura y fácil de usar para comunicarte con posibles compañeros.
                             </span>
                         </Col>
                     </Row>
@@ -63,10 +63,10 @@ export const Body = () => {
                 <Container>
                     <Row className="justify-content-center">
                         <Col className="text-center">
-                            <h1 className="title-section">The best stories start</h1>
-                            <h1 className="title-section second-line">with an exciting wait</h1>
+                            <h1 className="title-section">Las mejores historias comienzan</h1>
+                            <h1 className="title-section second-line">con una espera emocionante.</h1>
 
-                            <h5 className="subtitle-section">Join our waitlist and be part of our history</h5>
+                            <h5 className="subtitle-section">Únete a nuestra lista de espera y sé parte de nuestra historia.</h5>
 
                             <Contact />
                         </Col>

@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Hey! Roomie</title>
-        <meta name="description" content="Hey! Roomie is a cutting-edge platform that aims to transform the way people find roommates and shared living spaces." />
+        <meta name="description" content="Hey! Roomie hace que encontrar tu roomie perfecto sea fácil y rápido." />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3144810430632001" crossOrigin="anonymous"></script>

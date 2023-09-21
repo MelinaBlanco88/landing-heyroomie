@@ -57,7 +57,7 @@ export const Contact = () => {
             name="name"
             onChange={onInputChange}
             type="text"
-            placeholder="Enter name"
+            placeholder="Nombre"
             value={formSubmitted ? "" : name}
           />
         </Form.Group>
@@ -101,7 +101,7 @@ export const Contact = () => {
                 name="phoneNumber"
                 autoComplete="on"
                 id="phoneInput"
-                placeholder="Phone"
+                placeholder="Teléfono"
                 value={formSubmitted ? "" : phoneNumber}
                 onChange={onInputChange}
               />
@@ -111,13 +111,13 @@ export const Contact = () => {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Control
             type="email"
-            placeholder="Enter email"
+            placeholder="Email"
             name="email"
             value={formSubmitted ? "" : email}
             onChange={onInputChange}
           />
           <Form.Text className="text-muted">
-		        We&quot;ll never share your email with anyone else.
+		        Nunca se compartirán los datos.
           </Form.Text>
         </Form.Group>
 
@@ -130,7 +130,7 @@ export const Contact = () => {
             aria-label="Default select"
             value={formSubmitted ? "" : country}
           >
-            <option>Country</option>
+            <option>País</option>
             <option value="USA">USA</option>
             <option value="México">México</option>
             <option value="Colombia">Colombia</option>
@@ -142,13 +142,13 @@ export const Contact = () => {
       </div>
 
       <Button variant="primary" type="submit" className="hvr-radial-out">
-        I want to register
+        Unirme
       </Button>
 
       <Modal show={showSuccessMessage || errorMessage} onHide={handleCloseModal}>
         <Modal.Header closeButton>
           <Modal.Title>
-            Congratulations!
+            ¡Felicitaciones!
             
             <Image src="../../images/hand.png" thumbnail alt="Hand ok" />
           </Modal.Title>
