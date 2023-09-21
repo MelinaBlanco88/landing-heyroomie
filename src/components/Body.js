@@ -10,8 +10,7 @@ export const Body = () => {
                 <Container>
                     <Row className="align-items-center">
                         <Col className="text-center text-md-start" xs={12} md={7}>
-                            <h1 className="title-section">Compartir tu espacio,</h1>
-                            <h1 className="title-section">compartir tu vida.</h1>
+                            <h1 className="title-section">¿Buscas a tu Roomie perfecto?</h1>
                             <Link to="form"><Button variant="secondary" className="hvr-grow">Únete a la lista</Button></Link>
                         </Col>
 
