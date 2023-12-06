@@ -59,6 +59,7 @@ export const Contact = () => {
             type="text"
             placeholder="Nombre"
             value={formSubmitted ? "" : name}
+            required
           />
         </Form.Group>
 
@@ -115,6 +116,7 @@ export const Contact = () => {
             name="email"
             value={formSubmitted ? "" : email}
             onChange={onInputChange}
+            required
           />
           <Form.Text className="text-muted">
 		        Nunca se compartirán los datos.
